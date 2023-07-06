@@ -44,15 +44,15 @@ document.addEventListener("DOMContentLoaded", function() {
 
       let translatedWord;
 
-      if (isVowel(word[0])) {
+      if (hasVowel(word[0])) {
         // Check if word starts with a vowel
         translatedWord = word + "way";
         // Append 'way' to the end of the word
-      } else if (isConsonant(word[0]) && isConsonant(word[1])) {
+      } else if (hasConsonant(word[0]) && hasConsonant(word[1])) {
         // Check if word starts with two consonants
         translatedWord = word.slice(2) + word.slice(0, 2) + "ay";
         // Move the two consonants to the end of the word and append 'ay'
-      } else if (isConsonant(word[0])) {
+      } else if (hasConsonant(word[0])) {
         // Check if word starts with a single consonant
         translatedWord = word.slice(1) + word[0] + "ay";
         // Move the first consonant to the end of the word and append 'ay'
@@ -69,14 +69,14 @@ document.addEventListener("DOMContentLoaded", function() {
     // Join the translated words back into a sentence, trimming whitespace
   }
 
-  function isVowel(letter) {
+  function hasVowel(letter) {
     // Function to check if a letter is a vowel
     return ["a", "e", "i", "o", "u"].includes(letter);
   }
 
-  function isConsonant(letter) {
+  function hasConsonant(letter) {
     // Function to check if a letter is a consonant
-    return !isVowel(letter);
+    return !hasVowel(letter);
   }
 
   function translate() {
