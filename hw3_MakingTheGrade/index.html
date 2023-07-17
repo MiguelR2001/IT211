@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Grades</title>
+  <style>
+    table.my-table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    table.my-table th {
+      background-color: #54585d;
+      color: #ffffff;
+      font-weight: bold;
+      font-size: 13px;
+      border: 1px solid #54585d;
+      padding: 8px;
+      text-align: left;
+    }
+
+    table.my-table td {
+      padding: 15px;
+      color: #000000;
+      border: 1px solid #383c3f;
+    }
+
+    table.my-table tr {
+      background-color: #a5afb9;
+    }
+
+    table.my-table tr:nth-child(odd) {
+      background-color: #ffffff;
+    }
+  </style>
+</head>
+<body>
+  <h1>Student Grades</h1>
+
+  <table id="studentTable" class="my-table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Score</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <script src="script.js"></script>
+
+  <script>
+    // Call the function to display student data
+    displayStudentData();
+  </script>
+</body>
+</html>
